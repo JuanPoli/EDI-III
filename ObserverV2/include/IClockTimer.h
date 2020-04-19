@@ -3,11 +3,11 @@
 #include "ISubscriber.h"
 
 interface IClockTimer: public IMemoryManagement{
-        virtual int GetHour() = 0;
-        virtual int GetMinute() = 0;
-        virtual int GetSecond() = 0;
+        virtual int getHour() = 0;
+        virtual int getMinute() = 0;
+        virtual int getSecond() = 0;
         virtual ISubscriber* getSubscriber() = 0;
-        virtual void Tick() = 0;
+        virtual void tick() = 0;
 };
 
 #endif // IClockTimer_H

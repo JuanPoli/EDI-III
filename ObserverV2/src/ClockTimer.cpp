@@ -17,15 +17,15 @@ class ClockTimer: public IClockTimer
             notifier->release();
         }
 
-        int GetHour( void ) {
+        int getHour( void ) {
             return this->m_hours;
         }
 
-        int GetMinute( void ) {
+        int getMinute( void ) {
             return this->m_minutes;
         }
 
-        int GetSecond( void ) {
+        int getSecond( void ) {
             return this->m_seconds;
         }
 
@@ -33,7 +33,7 @@ class ClockTimer: public IClockTimer
             return this->subscriber;
         }
 
-        void Tick () {
+        void tick () {
             m_seconds++;
             if(m_seconds == 60) {
                 m_seconds = 0;

@@ -3,7 +3,7 @@
 #define interface struct
 
 interface IObserver{
-    virtual void Update() = 0;
+    virtual void update() = 0;
 };
 
 #endif // IObserver_H

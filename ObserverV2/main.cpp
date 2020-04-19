@@ -10,14 +10,14 @@ int main()
     IAnalogClock* analogClock = new AnalogClock(clockTimer);
     IDigitalClock* digitalClock = new DigitalClock(clockTimer);
     
-    clockTimer->Tick();
-    clockTimer->Tick();
-    clockTimer->Tick();
-    clockTimer->Tick();
-    clockTimer->Tick();
-    clockTimer->Tick();
+    clockTimer->tick();
+    clockTimer->tick();
+    clockTimer->tick();
+    clockTimer->tick();
+    clockTimer->tick();
+    clockTimer->tick();
     
-    
+
     digitalClock->release();
     analogClock->release();
     clockTimer->release();

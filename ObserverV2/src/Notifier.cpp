@@ -20,7 +20,7 @@ class Notifier: public INotifier{
             std::list<IObserver*> observers = subscribers->getSubscribers();
             for (it = observers.begin() ; it != observers.end(); ++it)
             {
-                (*it)->Update();
+                (*it)->update();
             }
         }
 

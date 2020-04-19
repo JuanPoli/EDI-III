@@ -12,23 +12,24 @@ class AnalogClock: public IAnalogClock {
         AnalogClock (IClockTimer* clockTimer):refCount(0) {
             acquire();
             timer = clockTimer;
-            timer->getSubscriber()->Attach(this);
+            timer->getSubscriber()->attach(this);
             std::cout << "AnalogClock::AnalogClock" << std::endl;
         }
 
         virtual ~AnalogClock () {
             std::cout << "AnalogClock::~AnalogClock" << std::endl;
-            timer->getSubscriber()->Detach(this);
+            timer->getSubscriber()->detach(this);
         }
 
-        void Update () {
-            Draw();
+        void update () {
+            draw();
         }
 
-        void Draw () {
-            std::string hours = TO_STRING(timer->GetHour());
-            std::string minutes = TO_STRING(timer->GetMinute());
-            std::string seconds = TO_STRING(timer->GetSecond());
+        void draw () {
+            std::string hours = TO_STRING(timer->getHour());
+            std::string minutes = TO_STRING(timer->getMinute());
+            std::string seconds = TO_STRING(timer->getSecond());
+            
             if(hours.size() == 1){hours = "0"+hours;}
             if(minutes.size() == 1){minutes = "0"+minutes;}
             if(seconds.size() == 1){seconds = "0"+seconds;}

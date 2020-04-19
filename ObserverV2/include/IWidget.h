@@ -3,7 +3,7 @@
 #include "IMemoryManagement.h"
 
 interface IWidget: public IMemoryManagement {
-        virtual void Draw() = 0;
+        virtual void draw() = 0;
 };
 
 #endif // IWidget_H

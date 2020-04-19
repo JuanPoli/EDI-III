@@ -14,11 +14,11 @@ class Subscriber: public ISubscriber
             std::cout << "Subscriber::~Subscriber" << std::endl;
         }
         
-        void Attach (IObserver* o)
+        void attach (IObserver* o)
         {
             _observers.push_front(o);
         }
-        void Detach (IObserver* o)
+        void detach (IObserver* o)
         {
             _observers.remove(o);
         }

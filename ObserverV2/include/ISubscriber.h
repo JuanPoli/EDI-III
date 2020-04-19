@@ -6,8 +6,8 @@
 #include <list>
 
 interface ISubscriber: public IMemoryManagement{
-    virtual void Attach(IObserver* observer) = 0;
-    virtual void Detach(IObserver* observer) = 0;
+    virtual void attach(IObserver* observer) = 0;
+    virtual void detach(IObserver* observer) = 0;
     virtual std::list<IObserver*> getSubscribers() = 0;
 };
 
