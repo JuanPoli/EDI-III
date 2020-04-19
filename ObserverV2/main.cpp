@@ -18,8 +18,6 @@ int main()
     clockTimer->Tick();
     
     
-    
-    
     digitalClock->release();
     analogClock->release();
     clockTimer->release();
